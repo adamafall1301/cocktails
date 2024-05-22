@@ -100,16 +100,33 @@ body {
   margin-bottom: 20px;
 }
 // Theme
+.active{
+  background-color: var(--secondary);
+}
+.badge{
+  background-color: var(--secondary);
+  border-radius: 3px;
+  color: white;
+  padding: 2px 5px;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.list-primary-action{
+  li{
+    &:hover {
+      background-color: var(--primary);
+      cursor: pointer;
+    }
+    transition: background-color 0.4s;
+  }
+}
+
 .list-primary {
   li {
     padding: 10px 15px;
     border: 1px solid var(--Lightgray);
     border-top: 0;
-    &:hover {
-      background-color: var(--primary);
-      cursor: pointer;
-    }
-    transition: 0.4s;
   }
   li:first-child {
     border-top: 1px solid var(--Lightgray);
