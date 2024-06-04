@@ -7,7 +7,7 @@ import {BehaviorSubject} from "rxjs";
 })
 export class PanierService {
 
-  public ingredients$: BehaviorSubject<Ingredient[]> = new BehaviorSubject<Ingredient[]>(null);
+  public ingredients$: BehaviorSubject<Ingredient[] | null> = new BehaviorSubject<Ingredient[] | null>(null);
 
   constructor() {
   }
@@ -15,7 +15,7 @@ export class PanierService {
   public addPanier(ingredients: Ingredient[]): void {
     const currentValue = this.ingredients$.value;
     if (currentValue) {
-      const obj = [...currentValue, ...ingredients].reduce((acc, curr) => {
+      const obj = [...currentValue, ...ingredients].reduce((acc:{[cle:string]: number}, curr:Ingredient) => {
         if (acc[curr.name]) {
           acc[curr.name] += curr.quantity;
         } else {

@@ -1,4 +1,4 @@
-<div class="d-flex flex-column">
+<div *ngIf="cocktail" class="d-flex flex-column">
   <img class="mb-20" [src]="cocktail.img" [alt]="cocktail.name" />
   <h3 class="mb-20">{{ cocktail.name }}</h3>
   <p class="mb-20">{{ cocktail.description }}</p>
@@ -9,7 +9,7 @@
    </li>
   </ul>
   <div class="d-flex flex-row flex-justify-content-between">
-    <button class="btn btn-primary">Editer le Cocktail</button>
+    <button routerLink="edit" class="btn btn-primary">Editer le Cocktail</button>
     <button (click)="addToPanier()" class="btn btn-primary">Ajouter au Panier</button>
   </div>
 </div>

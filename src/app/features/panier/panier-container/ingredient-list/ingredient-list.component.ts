@@ -1,5 +1,5 @@
 import {Component, Input} from '@angular/core';
-import {Ingredient} from "../../shared/interfaces/ingredient.interface";
+import {Ingredient} from "../../../../shared/interfaces/ingredient.interface";
 
 @Component({
   selector: 'app-ingredient-list',
@@ -8,7 +8,7 @@ import {Ingredient} from "../../shared/interfaces/ingredient.interface";
 })
 export class IngredientListComponent {
 
-   @Input() public ingredients: Ingredient[];
+   @Input() public ingredients: Ingredient[] | null = [];
 
   constructor() {
   }

@@ -100,8 +100,13 @@ body {
   margin-bottom: 20px;
 }
 // Theme
+.w-100{
+  width: 100%;
+}
 .active{
   background-color: var(--secondary);
+  color: white;
+  cursor: pointer;
 }
 .badge{
   background-color: var(--secondary);
@@ -138,6 +143,23 @@ body {
     border-bottom-right-radius: 3px;
   }
 }
+
+hr{
+  margin: 20px 0px;
+  border-top: 1px solid #dddddd;
+}
+
+input{
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  padding: 8px 15px;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
 .btn {
   padding: 10px 15px;
   background-color: white;
@@ -152,6 +174,9 @@ body {
       background-color: var(--secondary);
     }
     transition: background-color 0.4s;
+  }
+  &-secondary{
+    background-color: red;
   }
 }
 //debug faire apparaitre les bordure d'1 element
